@@ -1,0 +1,101 @@
+body {
+	background-color: #fcebb6;
+	color: #5e412f;
+}
+
+.navbar {
+	height: 60px;
+	background-image: url("../img/navbar_bg.png");
+	border: none;
+}
+
+a.navbar-brand {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font: normal 100%/normal Arial, Helvetica, sans-serif;
+	text-align: center;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	height: 30px;
+	background-color: #78c0a8;
+	-webkit-transform:    skewX(-45deg);
+	transform:    skewX(-45deg);
+}
+
+a.navbar-brand:hover {
+	background-color: #78c0a8 !important;
+}
+
+.logo {
+	color: #5e412f;
+	font-family: 'raleway-regular', arial;
+	letter-spacing: 1px;
+	font-size: 20px;
+	line-height: 0.85;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transform:    skewX(45deg);
+	transform:    skewX(45deg);
+}
+
+.logo > .name {
+	font-family: 'Pacifico', cursive;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav {
+	margin-right: 0px;
+}
+
+.navbar-default .navbar-nav>li {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font: normal 100%/normal Arial, Helvetica, sans-serif;
+	height: 60px;
+	width: 100px;
+	text-align: center;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	background: #f0a830;
+	-webkit-transform:    skewX(-45deg);
+	transform:    skewX(-45deg);
+	border-right: 10px solid #fcebb6;
+}
+
+.navbar-default .navbar-nav>li.rightmost {
+	border-right: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	-webkit-transform:    skewX(45deg);
+	transform:    skewX(45deg);
+	color: #5e412f;
+}
+	
+.navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover {
+	color: #fcebb6;
+	background-color: #5e412f;
+	height: 60px;
+}
+
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover {
+	background-color: rgba(0,0,0,0);
+	color: #fcebb6;
+}
+
+.navbar-default .navbar-nav>li:hover {
+	background-color: #f07818;
+	color: #5e412f;
+}
+
+a.text-title {
+	color: #fcebb6;
+}
+
+a.text-title:hover {
+	text-decoration: none !important;
+	color: #fcebb6;
+}

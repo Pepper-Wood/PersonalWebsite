@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<title>PORTFOLIO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.web'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><div class="logo"><div class="name">Kathryn DiPippo</div>Portfolio</div></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="rightmost"><a href="resume.pdf">Resume</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container">
+	
+		<br><br><br>
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".prog, .art, .web, .ui">All</span></li>
+			<li><span class="filter" data-filter=".prog">Programming</span></li>
+			<li><span class="filter" data-filter=".art">Art and Graphic Design</span></li>
+			<li><span class="filter" data-filter=".web">Web Development</span></li>
+			<li><span class="filter" data-filter=".ui">User Interface Design</span></li>
+		</ul>
+
+		<div id="portfoliolist">
+			<a href="adoptapedia.html"><div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/adoptapedia.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Adoptapedia</a>
+							<span class="text-category">PHP, HTML, CSS, JS, SQL</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div></a>
+			<div class="portfolio prog web" data-cat="prog web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/conway.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">John Conway's 3D Game of Life</a>
+							<span class="text-category">JavaScript, HTML, CSS</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art" data-cat="art">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/digital.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Digital Art Portfolio</a>
+							<span class="text-category">PaintToolSAI, Adobe Photoshop</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio prog" data-cat="prog">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/freeze.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">FreezeAlert</a>
+							<span class="text-category">Python</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art web" data-cat="art web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/garden.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Through the Garden Gate</a>
+							<span class="text-category">PaintToolSAI, HTML</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/genericon.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Genericon Website</a>
+							<span class="text-category">Wordpress, CSS</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art" data-cat="art">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/genericonart.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Genericon Art Assets</a>
+							<span class="text-category">PaintToolSAI, Adobe Photoshop</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art" data-cat="art">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/graphite.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Graphite Portfolio</a>
+							<span class="text-category">2013-2015</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio ui" data-cat="ui">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/mirthe2014.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Glucose Sensing MatLab Interface</a>
+							<span class="text-category">MatLab, 2014</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio ui" data-cat="ui">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/mirthe2015.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Glucose Sensing Python Interface</a>
+							<span class="text-category">Python, 2015</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art" data-cat="art">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/mixed.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Mixed Media Portfolio</a>
+							<span class="text-category">Various Media, 2013</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio art" data-cat="art">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/painting.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Painting Portfolio</a>
+							<span class="text-category">Acrylic, Oil, 2016</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/schuyler.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Schuyler Farms Website</a>
+							<span class="text-category">HTML, CSS, JavaScript</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio prog" data-cat="prog">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/tiberius.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Tiberius the Line Following Robot</a>
+							<span class="text-category">C</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio ui" data-cat="ui">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/virtualtour.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Virtual Tour Interface</a>
+							<span class="text-category">C#, CSHTML, ASP.NET</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="img/previews/larp.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">LARPing Resume</a>
+							<span class="text-category">HTML, CSS, Bootstrap</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div><!-- portfoliolist -->		
+	</div><!-- container -->
+
+</body>
+</html>
