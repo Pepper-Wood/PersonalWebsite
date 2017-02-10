@@ -1,102 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="author" content="" />
-	<meta name="description" content="" />
-
-	<title>Kathryn DiPippo | Homepage</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-
-	<script>document.documentElement.className = 'js';</script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-	<!-- Force latest IE rendering engine & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<!-- Make IE recognise HTML5 elements for styling -->
-	<!--[if lte IE 8]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<noscript>
-		<strong>Warning!</strong>
-		Your browser does not support HTML5 so some elements on this page are simulated using JScript. Unfortunately your browser has JScript disabled. Please enable it in order to display this page.
-	</noscript>
-	<![endif]-->
-	<!-- Disable image toolbar in IE6 -->
-	<!--[if lte IE 6]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/jquery.parallax.css" />
-
-  <!-- For text rotation -->
-  <link rel="stylesheet" type="text/css" href="css/simpletextrotator.css" />
-  
-  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-	<link rel="stylesheet" href="css/weather.css">
-	<link rel="stylesheet" href="css/style.css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<!-- Fixed navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><div class="logo"><div class="name">Kathryn DiPippo</div>Portfolio</div></a>
+
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'General')" id="defaultOpen">Villager Info</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Inventory')">Inventory</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Skills')">Life Skills Experience</a></li>
+</ul>
+
+<div id="General" class="tabcontent">
+  <div class="row">
+    <div class="col-sm-4">
+      <center><img src="img/kumo.png"></center>
+      <div class="container-fluid">
+        <b>Alchemy:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="rightmost"><a target="_blank" href="resume.pdf">Resume</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+      <div class="container-fluid">
+        <b>Angling:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Hunting:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Gathering:</b> Novice<div class="smallerText">20/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Mining:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Wood-cutting:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
     </div>
-  </nav>
-  <br><br><br><br>
-  <div class="main">
-    <h1>Hello! I'm Kathryn DiPippo: <span class="rotate">Programmer, Artist, Web Developer, Graphic Designer, UX/UI Designer</span></h1>
+    <div class="col-sm-8">
+      <h3>Profile</h3>
+      <br>
+      <b>Name:</b> Kumo the Soosh, Lottie the Spider<br>
+      <b>Pronouns:</b> He/Him for Kumo, She/Her for Lottie<br>
+      <b>Food/Drink:</b> <a target="_blank" href="http://files.recipetips.com/images/recipe/McCormick/Sweet_Spider_Cakes.jpg">Sweet Spider Cakes</a><br>
+      <b>Village:</b> Spicy Village<br>
+      <b>Personality:</b> Energetic, Childlike, Optimistic, Absentminded, Outspoken, Enthusiastic, Unrestrained<br>
+      <br>
+      <a target="_blank" href="http://toyhou.se/616866.kumo-and-lottie">Full profile can also be viewed at their Toyhou.se Page</a><br>
+      <br>
+      <h3>Level and Magic</h3>
+      <br>
+      <b>Current Level:</b> 1<br>
+      <b>Prompts Completed:</b> 0<br>
+      <b>Experience Earned:</b> 0 exp.<br>
+      <br>
+      <b>Domestic or Combat:</b> Domestic<br>
+      <b>Magic Ability:</b> Shoots spider web (yes, like Spiderman)<br>
+      <br>
+      <h3>Notable Relationships</h3>
+      <br>
+      <b>Friends and Family:</b> Unknown<br>
+      <b>Rivals and Enemies:</b> Unknown<br>
+      <b>Significant Other(s):</b> Unknown<br>
+    </div>
   </div>
-  <div id="target" class="weather rain parallax-port">
-      <img class="parallax-layer" src="img/parallax/1.png">
-      <img class="parallax-layer" src="img/parallax/2.png">
-      <img class="parallax-layer" src="img/parallax/3.png">
+</div>
+
+<div id="Inventory" class="tabcontent">
+  <table class="table table-striped">
+  <thead><tr><th>Quantity</th><th>Item Name</th><th>Obtained Via</th></tr></thead>
+  <tbody>
+    <tr class="bg-warning"><th scope="row">0</th><td><img src="img/seeds.png" style="height:50px;"> Swirl Seed</td><td></td></tr>
+    <tr><th scope="row">3</th><td>Maglia Flower</td><td>Gathering in The Thickets</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div id="Skills" class="tabcontent">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="container-fluid">
+        <b>Alchemy:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Angling:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Hunting:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Gathering:</b> Novice<div class="smallerText">20/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Mining:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+      <div class="container-fluid">
+        <b>Wood-cutting:</b> Novice<div class="smallerText">0/100 Exp.</div>
+        <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="container-fluid">
+        <b>Alchemy Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <b>Angling Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <b>Hunting Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <b>Gathering Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <b>Mining Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <b>Wood-cutting Quests Completed:</b>
+        <ul>
+          <li>none</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</div>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
-  <script src="js/jquery.parallax.js"></script>
-  <script type="text/javascript">
-	    $(".rotate").textrotator({
-	      animation: "flipUp",
-	      speed: 2000
-	    });
-	</script>
-  <script type="text/javascript">
-  jQuery(document).ready(function(){
-      var target = jQuery("#target");
-      
-      target
-      .children('img')
-      .parallax(
-          { mouseport: target },
-          { xparallax: 0.2, yparallax: 0.2 },     // Blue layer options
-          { xparallax: 0.6, yparallax: 0.6 },     // Green layer options
-          {}                                      // Red layer options
-      );
-  });
-  </script>
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" activeTab", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " activeTab";
+}
 
-<!--[if lt IE 7]>
-<script type="text/javascript" src="js/jquery.ifixpng.js"></script>
-<script type="text/javascript">jQuery(document).ready(function(){ jQuery("img[src$='png']").ifixpng(); });</script>
-<![endif]-->
-
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
 </body>
 </html>

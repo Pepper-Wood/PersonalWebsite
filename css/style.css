@@ -1,223 +1,56 @@
-body {
-	background-color: #fcebb6;
-	color: #5e412f;
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
 
-.navbar {
-	background-image: url("../img/navbar_bg.png");
-	border: none;
-}
+/* Float the list items side by side */
+ul.tab li {float: left;}
 
-a.navbar-brand {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	font: normal 100%/normal Arial, Helvetica, sans-serif;
-	text-align: center;
-	-o-text-overflow: clip;
-	text-overflow: clip;
-	height: 30px;
-	background-color: #78c0a8;
-	-webkit-transform:    skewX(-45deg);
-	transform:    skewX(-45deg);
-}
-
-a.navbar-brand:hover {
-	background-color: #78c0a8 !important;
-}
-
-.logo {
-	color: #5e412f;
-	font-family: 'raleway-regular', arial;
-	letter-spacing: 1px;
-	font-size: 20px;
-	line-height: 0.85;
-	text-decoration: none;
-	text-align: center;
-	-webkit-transform:    skewX(45deg);
-	transform:    skewX(45deg);
-}
-
-.logo > .name {
-	font-family: 'Pacifico', cursive;
-	font-size: 24px;
-	text-decoration: none;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: #5e412f;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #5e412f;
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #F0A830;
-}
-
-.navbar-default .navbar-nav {
-	margin-right: 0px;
-}
-
-.navbar-default .navbar-nav>li {
-  color: #5e412f;
-  background-color: #f0a830;
-  width: 100%;
-  text-align: center;
-  font-family: 'raleway-regular', arial;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 3px solid #f07818;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.navbar-default .navbar-nav>li a {
-  color: #5e412f;
-}
-
-.navbar-default .navbar-nav>li:hover {
-  background-color: #f07818;
-}
-
-@media screen and (min-width: 768px) { 
-  div#navbar.navbar-collapse.collapse.in {
-    background-color: rgba(0,0,0,0);
-  }
-  
-  .navbar-default .navbar-nav>li {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    font: normal 100%/normal Arial, Helvetica, sans-serif;
-    height: 60px;
-    width: 100px;
-    border-radius: 0px;
-    border: none;
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
     text-align: center;
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    background: #f0a830;
-    -webkit-transform:    skewX(-45deg);
-    transform:    skewX(-45deg);
-    margin: 0px;
-    border-right: 10px solid #fcebb6;
-  }
-
-  .navbar-default .navbar-nav>li.rightmost {
-    border-right: 0px;
-  }
-
-  .navbar-default .navbar-nav>li>a {
-    -webkit-transform:    skewX(45deg);
-    transform:    skewX(45deg);
-    color: #5e412f;
-  }
-    
-  .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover {
-    color: #fcebb6;
-    background-color: #5e412f;
-    height: 60px;
-  }
-
-  .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover {
-    background-color: rgba(0,0,0,0);
-    color: #fcebb6;
-  }
-
-  .navbar-default .navbar-nav>li:hover {
-    background-color: #f07818;
-    color: #5e412f;
-  }
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
-a.text-title {
-	color: #fcebb6;
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
 }
 
-a.text-title:hover {
-	text-decoration: none !important;
-	color: #fcebb6;
+/* Create an active/current tablink class */
+ul.tab li a:focus, .activeTab {
+    background-color: #ccc;
 }
 
-.parallax-port {
-  position: absolute;
-  top:172px; bottom:10px; left:10px; right:10px;
-  background-image: url("../img/parallax/merged2.png");
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
-.parallax-layer {
-  opacity: 0;
+.smallerText {
+  float: right;
+  font-size: 10px;
+  font-style: italic;
 }
 
-@media screen and (min-width: 768px) { 
-  .parallax-port {
-    position: absolute;
-    top:172px; bottom:80px; left:80px; right:80px;
-    background: #5e412f; overflow: hidden;
-  }
-
-  .parallax-layer {
-    position: absolute;
-    opacity: 1;
-  }
-
-  .site_wrap {
-    margin-left: 80px;
-  }
-}
-
-.modal-title, .modal-body {
-  text-align: center;
-}
-
-.modal-body>img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 5px;
-}
-
-.aboutIcon {
-  width: 100%;
-  border-radius: 25px;
+.progress {
   margin-bottom: 10px;
 }
 
-.information {
-  margin-right: 20px;
-}
-
-.indexText {
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #ff00ff;
-}
-
-.main {
-  text-align: left;
-  margin-left: 25%;
-}
-
-.rotate {
-  color: #78C0A8;
-}
-
-.carousel-inner>.item>a>img, .carousel-inner>.item>img {
-  width: 100%;
-}
-
-.carousel-caption {
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 30px;
-}
-
-#myCarousel, #mirtheCarousel {
-  margin-bottom: 5px;
-}
-
-.fotorama {
-  /* background-color: #F07818; */
-  background-color: #696969;
+.bg-warning {
+  background-color: #f0ad4e !important;
 }
