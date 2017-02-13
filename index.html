@@ -16,10 +16,12 @@
   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'General')" id="defaultOpen">Villager Info</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Inventory')">Inventory</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Skills')">Life Skills Experience</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Achievements')">Achievements</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Bandana')">Bandana</a></li>
 </ul>
 
 <div id="General" class="tabcontent">
-  <div class="row">
+  <div class="container-fluid">
     <div class="col-md-4">
       <div class="kumoimage"><img src="img/kumo.png"></div>
       <div class="container-fluid">
@@ -56,13 +58,14 @@
       <b>Village:</b> Spicy Village<br>
       <b>Personality:</b> Energetic, Childlike, Optimistic, Absentminded, Outspoken, Enthusiastic, Unrestrained<br>
       <br>
-      <a target="_blank" href="http://toyhou.se/616866.kumo-and-lottie">Full profile can also be viewed at their Toyhou.se Page</a><br>
+      <a target="_blank" href="http://pepper-wood.deviantart.com/art/Soosh-ARPG-Kumo-and-Lottie-661632308"><button type="button" class="btn btn-primary">ARPG Application</button></a>
+      <a target="_blank" href="http://toyhou.se/616866.kumo-and-lottie"><button type="button" class="btn btn-primary">Toyhou.se Profile</button></a>
       <br>
       <h3>Level and Magic</h3>
       <br>
       <b>Current Level:</b> 1<br>
       <b>Prompts Completed:</b> 0<br>
-      <b>Experience Earned:</b> 0 exp.<br>
+      <b>Experience Earned:</b> 55 exp.<br>
       <br>
       <b>Domestic or Combat:</b> Domestic<br>
       <b>Magic Ability:</b> Shoots spider web (yes, like Spiderman)<br>
@@ -78,20 +81,20 @@
 
 <div id="Inventory" class="tabcontent">
   <table class="table table-striped">
-  <thead><tr><th>Quantity</th><th>Item Name</th><th>Obtained Via</th></tr></thead>
-  <tbody>
-    <tr class="bg-warning"><th scope="row">0</th><td><img src="img/seeds.png" style="height:50px;"> Swirl Seeds</td><td></td></tr>
-    <tr><th scope="row">1</th><td>Dandepuff</td><td>Gathering in The Thickets</td></tr>
-    <tr><th scope="row">3</th><td>Maglia Flowers</td><td>Gathering in The Thickets</td></tr>
-    <tr><th scope="row">1</th><td>Origami Critter</td><td>Gathering in The Thickets</td></tr>
-    <tr><th scope="row">1</th><td>Sparkling Water</td><td>Gathering in The Thickets</td></tr>
-  </tbody>
-</table>
+    <thead><tr><th>Quantity</th><th>Item Name</th><th>Obtained Via</th></tr></thead>
+    <tbody>
+      <tr class="bg-warning"><th scope="row">0</th><td><img src="img/seeds.png" style="height:50px;"> Swirl Seeds</td><td></td></tr>
+      <tr><th scope="row">1</th><td>Dandepuff</td><td>Gathering in The Thickets</td></tr>
+      <tr><th scope="row">3</th><td>Maglia Flowers</td><td>Gathering in The Thickets</td></tr>
+      <tr><th scope="row">1</th><td>Origami Critter</td><td>Gathering in The Thickets</td></tr>
+      <tr><th scope="row">1</th><td>Sparkling Water</td><td>Gathering in The Thickets</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div id="Skills" class="tabcontent">
-  <div class="row">
-    <div class="col-sm-4">
+  <div class="container-fluid">
+    <div class="col-md-4">
       <div class="container-fluid">
         <b>Alchemy:</b> Novice<div class="smallerText">0/100 Exp.</div>
         <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
@@ -117,7 +120,7 @@
         <div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%">0%</div></div>
       </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <div class="container-fluid">
         <b>Alchemy Quests Completed:</b>
         <ul>
@@ -156,6 +159,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<div id="Achievements" class="tabcontent">
+</div>
+
+<div id="Bandana" class="tabcontent">
 </div>
 
 <script>
