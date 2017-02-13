@@ -54,3 +54,9 @@ ul.tab li a:focus, .activeTab {
 .bg-warning {
   background-color: #f0ad4e !important;
 }
+
+.kumoimage img {
+  display:block;
+  margin: auto;
+  width:100%;
+}
