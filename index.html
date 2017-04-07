@@ -1,14 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Kathryn DiPippo - Programmer, Artist, and Busy Bee</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 
-<a href="portfolio.html">Portfolio</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a target="_blank" href="resume.pdf">Resume</a>
+  <title>Kathryn DiPippo | Portfolio</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrapper" class="toggled">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><div class="logo"><div class="name">Kathryn DiPippo</div>Portfolio</div></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a target="_blank" href="resume.pdf">Resume</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <!-- Page Content -->
+    <div style="font-size:30px;text-align:center;">Hello! I'm <span style="font-weight:bold;">Kathryn DiPippo</span>, <span style="font-weight:bold;color:#ff1447">front-end</span> / <span style="font-weight:bold;color:#16f9d0">back-end</span> developer and graphic artist.</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ba-slider">
+            <img src="img/backend.png" alt="">       
+            <div class="resize">
+              <img src="img/frontend.png" alt="">
+            </div>
+            <span class="handle"></span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  // Call & init
+  $(document).ready(function(){
+    $('.ba-slider').each(function(){
+      var cur = $(this);
+      // Adjust the slider
+      var width = cur.width()+'px';
+      cur.find('.resize img').css('width', width);
+      // Bind dragging events
+      drags(cur.find('.handle'), cur.find('.resize'), cur);
+    });
+  });
+
+  // Update sliders on resize. 
+  // Because we all do this: i.imgur.com/YkbaV.gif
+  $(window).resize(function(){
+    $('.ba-slider').each(function(){
+      var cur = $(this);
+      var width = cur.width()+'px';
+      cur.find('.resize img').css('width', width);
+    });
+  });
+
+  function drags(dragElement, resizeElement, container) {
+    
+    // Initialize the dragging event on mousedown.
+    dragElement.on('mousedown touchstart', function(e) {
+      
+      dragElement.addClass('draggable');
+      resizeElement.addClass('resizable');
+      
+      // Check if it's a mouse or touch event and pass along the correct value
+      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      // Get the initial position
+      var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+   
+      // Set limits
+      minLeft = containerOffset + 10;
+      maxLeft = containerOffset + containerWidth - dragWidth - 10;
+      
+      // Calculate the dragging distance on mousemove.
+      dragElement.parents().on("mousemove touchmove", function(e) {
+        
+        // Check if it's a mouse or touch event and pass along the correct value
+        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        
+        leftValue = moveX + posX - dragWidth;
+        
+        // Prevent going off limits
+        if ( leftValue < minLeft) {
+          leftValue = minLeft;
+        } else if (leftValue > maxLeft) {
+          leftValue = maxLeft;
+        }
+        
+        // Translate the handle's left value to masked divs width.
+        widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+        
+        // Set the new values for the slider and the handle. 
+        // Bind mouseup events to stop dragging.
+        $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+          $(this).removeClass('draggable');
+          resizeElement.removeClass('resizable');
+        });
+        $('.resizable').css('width', widthValue);
+      }).on('mouseup touchend touchcancel', function(){
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      e.preventDefault();
+    }).on('mouseup touchend touchcancel', function(e){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+  }
+  </script>
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+</body>
+</html>

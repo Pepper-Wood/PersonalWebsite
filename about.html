@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+  <title>Kathryn DiPippo | Portfolio</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap-social.css" rel="stylesheet" >
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrapper" class="toggled">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="index.html"><div class="logo"><div class="name">Kathryn DiPippo</div>Portfolio</div></a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a target="_blank" href="resume.pdf">Resume</a></li>
+      </ul>
+    </div>
+    
+    <a href="#menu-toggle" class="btn btn-pink" id="menu-toggle">&hArr;</a>
+    <!-- Page Content -->
+    <div id="page-content-wrapper" style="background-color: #fff1ed; border-radius: 25px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <img class="aboutIcon" src="img/me.png">
+            <div class="row">
+              <div class="col-md-6">
+                <center><span class="fa fa-map-marker"></span> New Jersey, USA</center>
+              </div><div class="col-md-6">
+                <center><span class="fa fa-envelope"></span> dipipk@rpi.edu</center>
+              </div>
+            </div><br><div class="row">
+              <div class="col-md-6">
+                <a class="btn btn-block btn-social btn-github" target="blank" href="resume.pdf"><span class="fa fa-file-text"></span> My Resume</a>
+                <a class="btn btn-block btn-social btn-linkedin" target="blank" href="https://www.linkedin.com/in/kathryn-dipippo-530815101"><span class="fa fa-linkedin"></span> My LinkedIn Profile</a>
+              </div><div class="col-md-6">
+                <a class="btn btn-block btn-social btn-yahoo" target="blank" href="https://github.com/Pepper-Wood"><span class="fa fa-github"></span> My GitHub Profile</a>
+                <a class="btn btn-block btn-social btn-deviantart" target="blank" href="http://pepper-wood.deviantart.com/"><span class="fa fa-deviantart" style="color:#05CC47;"></span> My DeviantArt Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="information">
+              <br><br><br> <!-- eventually center this text vertically -->
+              <p>I am currently enrolled at Rensselaer Polytechnic Institute as a senior Computer Science major and Studio Arts minor. The courses I have completed have given me a solid foundation in an assortment of programming languages as well as a solid grasp of programming design, testing practices, and version control. I am able to learn through challenges and team collaboration in order to solve complex problems. I am well versed in black box and white box testing practices as well as coding design practices to help enable modularity. I have experience with writing object-oriented code for several years and continue to enjoy writing code that utilizes it. I prefer working with a team rather than by myself; communication, collaboration, and creativity are my definite strong points.</p>
+              <p>I am eager to pursue a successful career under multiple branches of computer science, including front-end positions (such as web development, front-end application programming, and UX/UI development) and back-end positions (such as database development and back-end/full-stack application programming).</p>
+              <p>Please feel free to contact me at any of my social media profiles on the left, email preferably, if you have any other questions or need me to provide additional materials. Thank you for your time, and I look forward to speaking with you!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  // Call & init
+  $(document).ready(function(){
+    $('.ba-slider').each(function(){
+      var cur = $(this);
+      // Adjust the slider
+      var width = cur.width()+'px';
+      cur.find('.resize img').css('width', width);
+      // Bind dragging events
+      drags(cur.find('.handle'), cur.find('.resize'), cur);
+    });
+  });
+
+  // Update sliders on resize. 
+  // Because we all do this: i.imgur.com/YkbaV.gif
+  $(window).resize(function(){
+    $('.ba-slider').each(function(){
+      var cur = $(this);
+      var width = cur.width()+'px';
+      cur.find('.resize img').css('width', width);
+    });
+  });
+
+  function drags(dragElement, resizeElement, container) {
+    
+    // Initialize the dragging event on mousedown.
+    dragElement.on('mousedown touchstart', function(e) {
+      
+      dragElement.addClass('draggable');
+      resizeElement.addClass('resizable');
+      
+      // Check if it's a mouse or touch event and pass along the correct value
+      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      // Get the initial position
+      var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+   
+      // Set limits
+      minLeft = containerOffset + 10;
+      maxLeft = containerOffset + containerWidth - dragWidth - 10;
+      
+      // Calculate the dragging distance on mousemove.
+      dragElement.parents().on("mousemove touchmove", function(e) {
+        
+        // Check if it's a mouse or touch event and pass along the correct value
+        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        
+        leftValue = moveX + posX - dragWidth;
+        
+        // Prevent going off limits
+        if ( leftValue < minLeft) {
+          leftValue = minLeft;
+        } else if (leftValue > maxLeft) {
+          leftValue = maxLeft;
+        }
+        
+        // Translate the handle's left value to masked divs width.
+        widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+        
+        // Set the new values for the slider and the handle. 
+        // Bind mouseup events to stop dragging.
+        $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+          $(this).removeClass('draggable');
+          resizeElement.removeClass('resizable');
+        });
+        $('.resizable').css('width', widthValue);
+      }).on('mouseup touchend touchcancel', function(){
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      e.preventDefault();
+    }).on('mouseup touchend touchcancel', function(e){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+  }
+  </script>
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+</body>
+</html>
