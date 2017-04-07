@@ -1,14 +1,10 @@
-/*!
- * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
- body {
+body {
   overflow-x: hidden;
   background-color: #6d676e;
   color: #1b1b1e;
  }
+ 
+ .indentP { text-indent: 50px; }
 
 /* ================================================================================ */
 /* front-page slider styling */
@@ -32,7 +28,6 @@
   width: 50%;
   overflow: hidden;
 }
-
 
 .handle { /* Thin line seperator */
   position:absolute; 
@@ -443,6 +438,7 @@ html {
   background-color: #1b1b1e;
   border-color: #6d676e;
   height: 60px;
+  font-weight: bold;
 }
 .navbar-default .navbar-brand {
   color: #6d676e;
