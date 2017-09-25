@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Data Miners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  table {
+    border-collapse: collapse;
+  }
+  table td {
+    width: 40px;
+    height: 40px;
+  }
+  .depth0 {
+    background-color: #bada55;
+  }
+  .depth1 {
+    background-color: #cfd8dc;
+  }
+  .depth2 {
+    background-color: #607d8b;
+  }
+  .depth3 {
+    background-color: #263238;
+  }
+  .toolImage {
+    display: block;
+    max-height: 100px;
+    margin: auto;
+  }
+  </style>
+</head>
+<body>
+<a href="index.html"><button type="button" class="btn btn-primary">Back</button></a>
+<div class="container">
+  <div id="life"></div>
+  <div class="row" style="text-align:center;">
+    <div class="col-md-6 col-xs-6">
+      <img class="toolImage" src="https://images-na.ssl-images-amazon.com/images/I/41FSZ56RToL._SX355_.jpg">
+      <p><input type="radio" name="tool" value="pick" checked> Pick</p>
+      <p>-1 to life and decreases 1 square</p>
+    </div>
+    <div class="col-md-6 col-xs-6">
+      <img class="toolImage" src="https://ae01.alicdn.com/kf/HTB1L6BmIXXXXXXHXpXXq6xXFXXXA/20PCS-A-Video-Game-The-Assassins-Tomahawk-Connor-s-Axe-Hatchet-17-5-Assassins-creed-weapons.jpg">
+      <p><input type="radio" name="tool" value="hammer"> Hammer</p>
+      <p>-3 and decreases 1 tile by 2 and surrounding tiles by 3</p>
+    </div>
+  </div>
+  <div id="miningBoard"></div>
+</div>
+
+<!-- JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+var width = 13;
+var height = 10;
+var startlife = 72;
+var life = 72;
+$(document).ready(function() {
+	generateGrid(width,height,life);
+  $("td").click(reduceDepth);
+});
+
+function generateGrid(width,height,life) {
+  var tableHtml = "";
+  var depth = 0;
+  //$("#life").html("Life: <input type='text' id='lifeMeter' value='" + life + "'>");
+  changeLife(life,startlife);
+  tableHtml += "<table>";
+  for (i = 0; i < height; i++) {
+    tableHtml += "<tr>";
+    for (j = 0; j < width; j++) {
+    	depth = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      //depth = 3;
+      tableHtml += "<td id='cell" + i + "-" + j + "' class='depth" + depth + "'></td>";
+    }
+    tableHtml += "</tr>";
+  }
+  tableHtml += "</table>";
+  $("#miningBoard").html(tableHtml);
+}
+
+function reduceDepth() {
+	var tool = $('input[name=tool]:checked').val();
+	if (tool == "pick") {
+  	reduceDepthCell("#"+$(this).attr("id"),1);
+ 	 	$('#lifeMeter').val(parseInt($('#lifeMeter').val())-1);
+    life -= 1;
+	} else if (tool == "hammer") {
+  	var currCell = $(this).attr("id").split("-");
+    currCell[0] = parseInt(currCell[0].replace("cell", ""));
+    currCell[1] = parseInt(currCell[1]);
+    reduceDepthCell(coordToID(currCell[0],currCell[1]),1);
+    var edges = getEdges(currCell[0],currCell[1]);
+    for (i = 0; i<edges.length; i++) {
+    	reduceDepthCell(edges[i],1);
+    }
+    life -= 3;
+  }
+  changeLife(life,startlife);
+}
+
+function modifiedH(h) {
+	if (h < 0) { return 0; }
+  if (h >= height) { return height-1; }
+  return h;
+}
+function modifiedW(w) {
+	if (w < 0) { return 0; }
+  if (w >= width) { return width-1; }
+  return w;
+}
+function modifiedDepth(d) {
+	if (d < 0) { return 0; }
+  return d;
+}
+function coordToID(h,w) {
+	return "#cell" + modifiedH(h) + "-" + modifiedW(w);
+}
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+function getEdges(h,w) {
+	var edges = [];
+  edges.push(coordToID(modifiedH(h),modifiedW(w)));
+  edges.push(coordToID(modifiedH(h-1),modifiedW(w)));
+  edges.push(coordToID(modifiedH(h),modifiedW(w-1)));
+  edges.push(coordToID(modifiedH(h+1),modifiedW(w)));
+  edges.push(coordToID(modifiedH(h),modifiedW(w+1)));
+  return edges.filter(onlyUnique);
+}
+
+function reduceDepthCell(id,depth) {
+  var className = $(id).attr("class");
+ 	var depthNum = modifiedDepth(parseInt(className.charAt(className.length - 1)) - depth);
+ 	$(id).removeClass(className).addClass("depth" + depthNum);
+}
+
+function changeLife(hurt,startHP) {
+	var newLife = Math.floor((hurt/startHP) * 100);
+  $("#life").html("<div class='progress'><div class='progress-bar' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100' style='width:" + newLife + "%'>" + hurt + "/" + startHP + "</div>");
+}
+
+function dirtRandomizer() {
+  var currCell = $(this).attr("id").split("-");
+  currCell[0] = parseInt(currCell[0].replace("cell", ""));
+  currCell[1] = parseInt(currCell[1]);
+}
+</script>
+</body>
+</html>

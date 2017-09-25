@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RPG Stats Material Design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/rpg.css">
+
+</head>
+<body>
+<div class='mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--grey-400'>
+		<header class='mdl-layout__header'>
+				<div class='mdl-layout__header-row'>
+						<span class='mdl-layout-title'>
+				RPG Stat Sheets
+			</span>
+						<div class='mdl-layout-spacer'></div>
+						<div class='mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right'>
+								<label class='mdl-button mdl-js-button mdl-button--icon' for='site-search-box'>
+										<i class='material-icons'>search</i>
+								</label>
+								<div class='mdl-textfield__expandable-holder'>
+										<input class='mdl-textfield__input' type='text' name='sample' id='site-search-box' />
+								</div>
+						</div>
+				</div>
+		</header>
+		<div class='mdl-layout__drawer'>
+				<span class='mdl-layout-title'>Characters</span>
+				<nav class='mdl-navigation'>
+						<a class='mdl-navigation__link active' href='#' data-character='garrus'>
+				Garrus Vakarian
+			</a>
+						<a class='mdl-navigation__link' href='#' data-character='liara'>
+				Liara T'Soni
+			</a>
+				</nav>
+		</div>
+		<main class='mdl-layout__content'>
+
+				<div class='page-content'>
+						<button class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored' id='add-character-button'>
+								<i class='material-icons'>add</i>
+						</button>
+						<div class='mdl-grid'>
+								<div class='mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone'>
+										<div class='mdl-card mdl-shadow--3dp character-card character-bio-card'>
+												<div class='mdl-card__title'>
+														<h2 class='mdl-card__title-text'>
+										Garrus Vakarian
+									</h2>
+												</div>
+												<div class='mdl-card__supporting-text'>
+														<p>
+																Race: <span id='character-race'></span>
+																<br /> Gender: <span id='character-gender'></span>
+																<br /> Class: <span id='character-class'></span>
+																<br /> Level: <span id='character-level'></span>
+																<br /> XP: <span id='character-experience'></span>
+														</p>
+												</div>
+										</div>
+										<div class='mdl-card mdl-shadow--3dp character-card'>
+												<div class='mdl-card__title mdl-color--red-700 mdl-color-text--white'>
+														<h2 class='mdl-card__title-text'>
+										Stats
+									</h2>
+												</div>
+												<div class='mdl-card__supporting-text'>
+														<div class='mdl-tabs mdl-js-tabs mdl-js-ripple-effect'>
+																<div class='mdl-tabs__tab-bar'>
+																		<a href='#attributes-panel' class='mdl-tabs__tab is-active'>Attributes</a>
+																		<a href='#skills-panel' class='mdl-tabs__tab'>
+												Skills
+											</a>
+																</div>
+																<div class='mdl-tabs__panel is-active' id='attributes-panel'>
+																		<table class='mdl-data-table mdl-js-data-table'>
+																				<thead>
+																						<tr>
+																								<th class='mdl-data-table__cell--non-numeric'>
+																										Attribute name
+																								</th>
+																								<th>
+																										Value
+																								</th>
+																						</tr>
+																				</thead>
+																				<tbody>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Accuracy
+																								</td>
+																								<td data-attribute="Accuracy">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Communication
+																								</td>
+																								<td data-attribute="Communication">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Constitution
+																								</td>
+																								<td data-attribute="Constitution">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Dexterity
+																								</td>
+																								<td data-attribute="Dexterity">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Fighting
+																								</td>
+																								<td data-attribute="Fighting">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Intelligence
+																								</td>
+																								<td data-attribute="Intelligence">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Perception
+																								</td>
+																								<td data-attribute="Perception">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Strength
+																								</td>
+																								<td data-attribute="Strength">
+
+																								</td>
+																						</tr>
+																						<tr>
+																								<td class='mdl-data-table__cell--non-numeric'>
+																										Willpower
+																								</td>
+																								<td data-attribute="Willpower">
+
+																								</td>
+																						</tr>
+
+																				</tbody>
+																		</table>
+																</div>
+																<div class='mdl-tabs__panel' id='skills-panel'>
+																		<ul class='collection collapsible popout collapsible-accordion'>
+																				<li class='collection-item'>
+																						<div class='collapsible-header'>
+																								Take aim
+																						</div>
+																						<div class='collapsible-body'>
+																								Combat rolls get +1 this turn.
+																						</div>
+																				</li>
+																				<li class='collection-item'>
+																						<div class='collapsible-header'>
+																								Penetrating Shot</div>
+																						<div class='collapsible-body'>
+																								Attacks that hit penetrate up to 4 meters behind the primary target this turn.
+																						</div>
+																				</li>
+																		</ul>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class='mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone'>
+										<div class='mdl-card mdl-shadow--3dp character-card character-background'>
+												<div class='mdl-card__title mdl-color--green mdl-color-text--white'>
+														<h2 class='mdl-card__title-text'>Background</h2>
+												</div>
+												<div class='mdl-card__supporting-text'>
+														<p>
+																Garrus grew up on the Turian homeworld of Palaven. After doing his mandatory service in the Turian Military, Garrus joined Citadel Security(C-Sec) and was assigned to the Saren Arterius case in 2183 and helped Shepard defeat Saren and prevent the first
+																Reaper invasion. He joined the crew on the Normandy until it was destroyed by Collectors. He was unable to return to the red-tape of C-Sec and started a mercenary group on Omega, operating under the codename "Archangel". After stopping
+																the Collectors with Commander Shepard, Garrus went back to the Turian military to attempt to convince them to prepare for the Reaper invasion. Though the inevitable invasion hit Palaven hard, Garrus's efforts helped ensure the survival
+																of the Turian race. He once again joined up with the SR2-Normandy to help defeat the Reapers once and for all.
+														</p>
+												</div>
+										</div>
+										<div class='mdl-card mdl-shadow--3dp character-card character-weapons'>
+												<div class='mdl-card__title mdl-color--blue-grey mdl-color-text--white'>
+														<h2 class='mdl-card__title-text'>
+										Weapons
+									</h2>
+												</div>
+												<div class='mdl-card__supporting-text'>
+														<div class='primary-weapon weapon-details'>
+																<div class='mdl-grid'>
+																		<div class='mdl-cell mdl-cell--12-col'>
+																				<h3 class='weapon-name'>
+
+																</h3>
+																		</div>
+																		<div class='mdl-cell mdl-cell--3-col'>
+																				<img class='weapon-image' />
+																		</div>
+																		<div class='mdl-cell mdl-cell--9-col'>
+																				<div class='type-range-and-damage'>
+																						<h4 class='weapon-type'></h4>
+																						<p>
+																								<strong>Range: </strong><span class='weapon-range'></span>
+																						</p>
+																						<p>
+																								<strong>Damage: </strong><span class='weapon-damage'></span>
+																						</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class='secondary-weapon weapon-details'>
+																<div class='mdl-grid'>
+																		<div class='mdl-cell mdl-cell--12-col'>
+																				<h3 class='weapon-name'>
+
+																</h3>
+																		</div>
+																		<div class='mdl-cell mdl-cell--3-col'>
+																				<img class='weapon-image' />
+																		</div>
+																		<div class='mdl-cell mdl-cell--9-col'>
+																				<div class='type-range-and-damage'>
+																						<h4 class='weapon-type'></h4>
+																						<p>
+																								<strong>Range: </strong><span class='weapon-range'></span>
+																						</p>
+																						<p>
+																								<strong>Damage: </strong><span class='weapon-damage'></span>
+																						</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class='melee-weapon weapon-details'>
+																<div class='mdl-grid'>
+																		<div class='mdl-cell mdl-cell--12-col'>
+																				<h3 class='weapon-name'>
+
+																</h3>
+																		</div>
+																		<div class='mdl-cell mdl-cell--3-col'>
+																				<img class='weapon-image' />
+																		</div>
+																		<div class='mdl-cell mdl-cell--9-col'>
+																				<div class='type-range-and-damage'>
+																						<h4 class='weapon-type'></h4>
+																						<p>
+																								<strong>Range: </strong><span class='weapon-range'></span>
+																						</p>
+																						<p>
+																								<strong>Damage: </strong><span class='weapon-damage'></span>
+																						</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class='mdl-card mdl-shadow--3dp character-card character-movement'>
+												<div class='mdl-card__title mdl-color--indigo mdl-color-text--white'>
+														<h2 class='mdl-card__title-text'>
+												Movement
+											</h2>
+												</div>
+												<div class='mdl-card__supporting-text'>
+														<p>
+																<strong>Normal (Minor action):</strong> 5 meters
+																<br />
+																<strong>Sprint (Major action):</strong> 15 meters
+														</p>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<footer class='mdl-mini-footer'>
+						<div class='mdl-mini-footer--left-section'>
+								<div class='mdl-logo'>
+										Title
+								</div>
+								<ul class='mdl-mini-footer--link-list'>
+										<li><a href='#'>Help</a></li>
+										<li><a href='#'>Link2</a></li>
+								</ul>
+						</div>
+				</footer>
+		</main>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="js/rpg.js"></script>
+</body>
+</html>

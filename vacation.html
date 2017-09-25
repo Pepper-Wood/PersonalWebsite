@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vacation Calculator</title>
+</head>
+<body>
+  <p id="katDate"></p>
+  <p id="tyDate"></p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+  Date.daysBetween = function(date1, date2) {
+    var one_day=1000*60*60*24;
+    var date1_ms = date1.getTime();
+    var date2_ms = date2.getTime();
+    var difference_ms = date2_ms - date1_ms;
+    return Math.round(difference_ms/one_day);
+  }
+  function vacCalc(name,myDate,today) {
+    finalString = name + " has worked " + Date.daysBetween(myDate,today);
+    finalString += " days and earned " + (Date.daysBetween(myDate,today)*0.02766666666).toFixed(2) + " vacation days";
+    return finalString;
+  }
+  var today= new Date();
+  var katStart = new Date(2017, 5, 1);
+  var tyStart = new Date(2017, 7, 1);
+  $("#katDate").text(vacCalc("Kathryn",katStart,today));
+  $("#tyDate").text(vacCalc("Tyler",tyStart,today));
+  </script>
+</body>
+</html>

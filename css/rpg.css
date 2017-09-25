@@ -1,0 +1,87 @@
+html, p, body, table, div, span, a{
+	font-size: 16px;
+}
+html,
+body {
+		font-family: "Roboto", "Helvetica", Arial;
+		font-size: 16px;
+}
+p {
+		font-size: 16px;
+}
+
+.character-card {
+		margin-bottom: 24px;
+}
+
+.character-card.mdl-card,
+.mdl-data-table {
+		width: 100%;
+}
+
+.character-bio-card .mdl-card__title {
+		height: 245px;
+		color: #fff;
+}
+
+.mdl-color--primary {
+		color: #fff;
+}
+
+.mdl-navigation__link.active {
+		background-color: #E0E0E0;
+}
+
+.weapon-details h3 {
+		font-size: 1.8rem;
+		margin-bottom: 0;
+}
+
+.weapon-details h4 {
+		font-size: 1.4rem;
+		margin: 0;
+}
+
+.weapon-details p {
+		margin: 0;
+}
+
+.weapon-details .weapon-image {
+		width: 100%;
+}
+
+#add-character-button {
+		position: fixed;
+		bottom: 15px;
+		right: 25px;
+		z-index: 25;
+}
+
+.collection {
+		list-style-type: none;
+		margin: 0;
+		padding: 0 4px;
+}
+
+.collection li {
+		margin: 0;
+		padding: 16px;
+		border-bottom: 1px solid #e0e0e0;
+}
+
+.collection li:hover {
+		background-color: #eee;
+}
+
+.collection li:last-child {
+		border: none;
+}
+.collapsible li{
+	cursor: pointer;
+}
+.collapsible-body{
+	padding-left: 15px;
+}
+.collapsible-header{
+	font-weight:bold;
+}
