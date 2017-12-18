@@ -6,34 +6,121 @@
   <title>Bunny Dress Up</title>
 
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="css/dressup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <style>
+    body {
+        background-color: #cc9ad6;
+    }
+    img {
+        position: absolute;
+        display:inline-block;
+        width: 300px;
+    }
+    .horizontalFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .horizontalFlex>div {
+        width: 50%;
+    }
+    #characterContainer {
+        width: 300px;
+    }
+    #character {
+        z-index: -1000;
+    }
+    .bandana {
+        visibility:hidden;
+        z-index: 2;
+    }
+    .commonbtn {
+        background-color: #61B2FF; /* common blue */
+    }
+    .commonbtn:hover, .commonbtn:focus, .commonbtn.active {
+        background-color: #005FBA;
+        color: #FFF;
+    }
+    .uncommonbtn {
+        background-color: #BE84FF; /* uncommon purple */
+    }
+    .uncommonbtn:hover, .uncommonbtn:focus, .uncommonbtn.active {
+        background-color: #7927D4;
+        color: #FFF;
+    }
+    .rarebtn {
+        background-color: #FF82DF; /* rare pink */
+    }
+    .rarebtn:hover, .rarebtn:focus, .rarebtn.active {
+        background-color: #EF26BC;
+        color: #FFF;
+    }
+    .exclusivebtn {
+        background-color: #FF5E62; /* exclusive red */
+    }
+    .exclusivebtn:hover, .exclusivebtn:focus, .exclusivebtn.active {
+        background-color: #E40B2F;
+        color: #FFF;
+    }
+  </style>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 
 <body>
-  <ul>
-    <li><button class="btn btn-default" id="shirt_button" type="button" >top</button></li>
-    <li><button class="btn btn-default" id="pant_button" type="button">bottom</button></li>
-  </ul>
+    <div class="container horizontalFlex">
+        <div id="characterContainer">
+            <img id="character" src="soosh/base.png">
+            <img id="bandana1" class="bandana" src="soosh/bandanas/classic.png">
+            <img id="bandana2" class="bandana" src="soosh/bandanas/uptie.png">
+            <img id="bandana3" class="bandana" src="soosh/bandanas/cowboy.png">
+            <img id="bandana4" class="bandana" src="soosh/bandanas/headband.png">
+            <img id="bandana5" class="bandana" src="soosh/bandanas/singleEar.png">
+            <img id="bandana6" class="bandana" src="soosh/bandanas/mask.png">
+            <img id="bandana7" class="bandana" src="soosh/bandanas/singlePaw.png">
+            <img id="bandana8" class="bandana" src="soosh/bandanas/shawl.png">
+            <img id="bandana9" class="bandana" src="soosh/bandanas/sling.png">
+            <img id="bandana10" class="bandana" src="soosh/bandanas/winterScarf.png">
+            <img id="bandana11" class="bandana" src="soosh/bandanas/tail.png">
+            <img id="bandana12" class="bandana" src="soosh/bandanas/poncho.png">
+            <img id="bandana13" class="bandana" src="soosh/bandanas/hair.png">
+            <img id="bandana14" class="bandana" src="soosh/bandanas/gown.png">
+            <img id="bandana15" class="bandana" src="soosh/bandanas/cape.png">
+            <img id="bandana16" class="bandana" src="soosh/bandanas/toga.png">
+            <img id="bandana17" class="bandana" src="soosh/bandanas/accessory.png">
+            <img id="bandana18" class="bandana" src="soosh/bandanas/travelers.png">
+            <img id="bandana19" class="bandana" src="soosh/bandanas/hood.png">
+            <img id="bandana20" class="bandana" src="soosh/bandanas/hairUptieHybrid.png">
+            <img id="bandana21" class="bandana" src="soosh/bandanas/elegant.png">
+        </div>
+        <div style="flex-grow:1;text-align:center">
+            <button class="btn btn-default" id="bandanaButtonPrev" type="button">Bandana Prev</button>
+            <button class="btn btn-default" id="bandanaButtonNext" type="button">Bandana Next</button>
+            <button class="btn commonbtn specificBandanaButton" id="bandana1Button" type="button">Classic</button>
+            <button class="btn commonbtn specificBandanaButton" id="bandana2Button" type="button">Uptie</button>
+            <button class="btn commonbtn specificBandanaButton" id="bandana3Button" type="button">Cowboy</button>
+            <button class="btn commonbtn specificBandanaButton" id="bandana4Button" type="button">Headband</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana5Button" type="button">Ear (Single)</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana6Button" type="button">Mask</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana7Button" type="button">Paw (Single)</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana8Button" type="button">Shawl</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana9Button" type="button">Sling</button>
+            <button class="btn uncommonbtn specificBandanaButton" id="bandana10Button" type="button">Winter Scarf</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana11Button" type="button">Tail</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana12Button" type="button">Poncho</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana13Button" type="button">Hair</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana14Button" type="button">Gown</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana15Button" type="button">Cape</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana16Button" type="button">Toga</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana17Button" type="button">Accessory</button>
+            <button class="btn rarebtn specificBandanaButton" id="bandana18Button" type="button">Traveler's</button>
+            <button class="btn exclusivebtn specificBandanaButton" id="bandana19Button" type="button">Hood</button>
+            <button class="btn exclusivebtn specificBandanaButton" id="bandana20Button" type="button">Hair/Uptie Hybrid</button>
+            <button class="btn exclusivebtn specificBandanaButton" id="bandana21Button" type="button">Elegant</button>
+        </div>
+    </div>
 
-  <img id="character" src="https://s-media-cache-ak0.pinimg.com/originals/d5/19/f0/d519f0f021325f16e85a193ec3718130.png" />
-  <img id="top1" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/25/43/a9/2543a9ef622c17ca0ccd1fae4441a8ac.png" />
-  <img id="top2" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/05/b5/56/05b556aee24a79e17050270c7274de8c.png" />
-  <img id="top3" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/d7/5c/ba/d75cbab4c752bcd839098e7304fa449b.png" />
-  <img id="top4" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/84/07/2f/84072f86cc9c7700367b958b1252527b.png" />
-  <img id="top5" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/d3/72/cf/d372cf67ffa1073da171f6824ed30140.png" />
-  <img id="top6" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/20/72/f6/2072f64b75fb5753a6b038312697fa0d.png" />
-  <img id="top7" class="shirt" src="https://s-media-cache-ak0.pinimg.com/originals/1f/86/b1/1f86b13b426f5ab1483326c97eaa962c.png" />
-  <img id="bottom1" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/b3/c2/4d/b3c24d75d647564cdaa1d85f854587ba.png" />
-  <img id="bottom2"  class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/a5/3a/56/a53a562de60d53e341289584e585f776.png" />
-  <img id="bottom3" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/2b/26/3b/2b263b07bcdd3d2fafab6ec03402e255.png" />
-  <img id="bottom4" style="z-index: 3" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/dd/a6/d7/dda6d7944174edbd743d92360e2ef8f5.png" />
-  <img id="bottom5" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/94/c7/15/94c715a60995c215a74a2492a5bea344.png" />
-  <img id="bottom6" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/da/1a/16/da1a1609695435ddc106d4f8989f1535.png" />
-  <img id="bottom7" class="pant" src="https://s-media-cache-ak0.pinimg.com/originals/c3/78/78/c3787895d353d3b4d8534855ae0b1d83.png" />
-
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-  <script src="js/dressup.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="js/dressupSoosh.js"></script>
 
 </body>
 </html>
