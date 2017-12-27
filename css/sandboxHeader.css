@@ -25,6 +25,14 @@ header i {
     vertical-align: middle;
     padding-right: 1em;
 }
+.headerIcon {
+    height: 25px;
+    padding: 0 10px;
+}
+.headerLink, .headerLink:hover {
+    color: #FFF;
+    text-decoration: none;
+}
 .headerOverlay {
     display: none;
     position: fixed;
