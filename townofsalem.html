@@ -4,20 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Town of Salem Tools</title>
-
-  <!-- CSS Stylesheet -->
+  <!-- Icon courtesy of https://smashicons.com/ -->
+  <link rel="icon" href="icon.png" type="image/png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/sandboxHeader.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-  <a href="index.html"><button type="button" class="btn btn-primary">Back</button></a>
+
+
+<div class="sidebar">
+    <span class="sidebarTitle">Sandbox Repos</span>
+    <ul class="sidebarNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sooshTraitVisualizer.html">Soosh Trait Visualizer</a></li>
+        <li><a href="spritegen.html">NES-Style Sprite Generator</a></li>
+        <li class="active"><a href="dataminers.html">Data Miners</a></li>
+        <li><a href="townofsalem.html">Town of Salem Tracker</a></li>
+        <li><a href="personality.html">Personality Generator</a></li>
+        <li><a href="rpg.html">RPG Stat Sheet Template</a></li>
+    </ul>
+</div>
+<div class="headerOverlay"></div>
+<header>
+    <div><i id="sidebarTrigger" class="material-icons">dehaze</i></div>
+    <div>Web Development Sandbox</div>
+</header>
+<div class="headerblankspace"></div>
+
+
   <div class="container">
     <h2>Town of Salem Tools</h2>
     <ul class="nav nav-tabs">
       <li class="active"><a href="#home">Tracker</a></li>
       <li><a href="#menu1">Invest Results</a></li>
-      <li><a href="#menu2">EMPTY</a></li>
-      <li><a href="#menu3">EMPTY</a></li>
     </ul>
 
     <div class="tab-content">
@@ -226,20 +247,13 @@
            </tbody>
          </table>
       </div>
-
-      <!-- EMPTY ======================================================================================= -->
-      <div id="menu2" class="tab-pane fade">
-      </div>
-
-      <!-- EMPTY ======================================================================================= -->
-      <div id="menu3" class="tab-pane fade">
-      </div>
     </div>
   </div>
 
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/sandboxHeader.js"></script>
   <script>
   $(document).ready(function(){
     $(".nav-tabs a").click(function(){

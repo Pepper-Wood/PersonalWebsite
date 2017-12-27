@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)http://pwstegman.kd.io/character%20recognition/ -->
 <html lang="en">
-  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+<head>
     <title>Icon Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon courtesy of https://smashicons.com/ -->
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/sandboxHeader.css">
     <style type="text/css">
-      canvas { border: 1px solid #000; float:left; margin-left:50px;}
-      @import url(http://fonts.googleapis.com/css?family=Lato);
-      body {
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-      font-size:1em;
-      }
-
-      </style>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/spritegen.js"></script>
-
-  </head>
-  <a href="index.html"><button type="button" class="btn btn-primary">Back</button></a>
-  <body unselectable="on" align="center">
-   <h1>Sprite Generator</h1>
+    canvas {
+        border: 1px solid #000;
+        float: left;
+        margin-left: 50px;
+    }
+    body {
+        margin: 0;
+        font-size:1em;
+    }
+    </style>
+</head>
+<body unselectable="on" align="center">
 
 
-      <canvas id="canvas" width="300" height="500">
-      </canvas>
-      <div id="stuff" style="vertical-align:middle;height:100%;">
-        <p><a href="https://github.com/mjkaufer/Icon-Generator">Based on the Icon Generator by mjkaufer</a></p>
-        <input type="button" onclick="genRandom()" value="Generate a random icon!">
-      </div>
+<div class="sidebar">
+    <span class="sidebarTitle">Sandbox Repos</span>
+    <ul class="sidebarNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sooshTraitVisualizer.html">Soosh Trait Visualizer</a></li>
+        <li class="active"><a href="spritegen.html">NES-Style Sprite Generator</a></li>
+        <li><a href="dataminers.html">Data Miners</a></li>
+        <li><a href="townofsalem.html">Town of Salem Tracker</a></li>
+        <li><a href="personality.html">Personality Generator</a></li>
+        <li><a href="rpg.html">RPG Stat Sheet Template</a></li>
+    </ul>
+</div>
+<div class="headerOverlay"></div>
+<header>
+    <div><i id="sidebarTrigger" class="material-icons">dehaze</i></div>
+    <div>Web Development Sandbox</div>
+</header>
+<div class="headerblankspace"></div>
 
 
 
+<h4>Sprite Generator</h4>
+<canvas id="canvas" width="300" height="500"></canvas>
+<div id="stuff" style="vertical-align:middle;height:100%;">
+    <p>Based on the <a href="https://github.com/mjkaufer/Icon-Generator">Icon Generator by mjkaufer</a></p>
+    <button type="button" class="btn btn-default" onclick="genRandom()">Generate a random icon!</button>
+</div>
 
-  </body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/sandboxHeader.js"></script>
+<script type="text/javascript" src="js/spritegen.js"></script>
+</body>
 </html>

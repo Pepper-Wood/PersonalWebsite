@@ -1,25 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Web-Development Sandbox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon courtesy of https://smashicons.com/ -->
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/sandboxHeader.css">
+    <style>
+    body {
+        background-color: #f5f2f0;
+        color: rgba(0,0,0,0.87);
+    }
+    h4 {
+        text-align: center;
+    }
+    .flexTable3 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flexTable3>div {
+        width: 30%;
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+        list-style: none;
+        margin: 1em;
+    }
+    .card a {
+        color: rgba(0,0,0,0.87);
+    }
+    .card:hover {
+        -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    }
+    .card-image>img {
+        height: 12em;
+        object-fit: cover;
+    }
+    .card-title {
+        text-shadow: 0 0 4px #000;
+    }
+    .topImage {
+        display: block;
+        width: 80%;
+        height: 25em;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: 50% 80%;
+    }
+    </style>
 </head>
 <body>
 
+
+<div class="sidebar">
+    <span class="sidebarTitle">Sandbox Repos</span>
+    <ul class="sidebarNav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="sooshTraitVisualizer.html">Soosh Trait Visualizer</a></li>
+        <li><a href="spritegen.html">NES-Style Sprite Generator</a></li>
+        <li><a href="dataminers.html">Data Miners</a></li>
+        <li><a href="townofsalem.html">Town of Salem Tracker</a></li>
+        <li><a href="personality.html">Personality Generator</a></li>
+        <li><a href="rpg.html">RPG Stat Sheet Template</a></li>
+    </ul>
+</div>
+<div class="headerOverlay"></div>
+<header>
+    <div><i id="sidebarTrigger" class="material-icons">dehaze</i></div>
+    <div>Web Development Sandbox</div>
+</header>
+<div class="headerblankspace"></div>
+
+
 <div class="container-fluid">
-  <h1>Kathryn's Web Development Sandbox</h1>
-  <p>This repository is used for the small web-based side projects I play around with until they get big enough to warrant their own repository</p>
-  <a href="townofsalem.html"><button type="button" class="btn btn-block btn-danger">Town of Salem Tracker</button></a>
-  <a href="personality.html"><button type="button" class="btn btn-block btn-warning">Personality Generator</button></a>
-  <a href="dressup.html"><button type="button" class="btn btn-block btn-success">Dress-Up Game</button></a>
-  <a href="spritegen.html"><button type="button" class="btn btn-block btn-primary">NES Sprite Generator</button></a>
-  <a href="dataminers.html"><button type="button" class="btn btn-block btn-primary">Data Miners</button></a>
+    <img class="topImage" src="https://img00.deviantart.net/0d31/i/2017/180/b/7/_soosharpg_prompt__summer_with_kumo_and_lottie_by_pepper_wood-dbehp7g.png">
+    <h4>Kathryn's Web Development Sandbox</h4>
+    <p>This repository is used for the small web-based side projects I play around with until they get big enough to warrant their own repository</p>
+    <div class="flexTable3">
+        <div class="card">
+            <a href="sooshTraitVisualizer.html">
+                <div class="card-image">
+                    <img src="http://www.sushidogs.com/uploads/1/0/4/9/10492009/8932842.png?190">
+                    <span class="card-title">Soosh Trait Visualizer</span>
+                </div>
+                <div class="card-content">
+                    <p>Because I have trouble coming up with how to combine sushi dog traits, I made a "dress-up"-game type thing that gives me a "base" to start off with. I plan to eventually move into a separate Sushidog repository than here.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="personality.html">
+                <div class="card-image">
+                    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/11/11/harold-0.jpg">
+                    <span class="card-title">Personality Generator</span>
+                </div>
+                <div class="card-content">
+                    <p>Random personality traits generator to help me come up with personalities for characters. Was not able to get an API call to a dictionary to fetch word definitions, so instead I made a .js file with a 2D array of words and definitions.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="spritegen.html">
+                <div class="card-image">
+                    <img src="http://flyers.arcade-museum.com/flyers_video/universal/48144201.jpg">
+                    <span class="card-title">NES-Style Sprite Generator</span>
+                </div>
+                <div class="card-content">
+                    <p>I modified a pre-existing sprite generator as an exercise in character design for me. I click the generate button, and I draw what I think the sprite empbodies. Inspired by old NES graphics that didn't have a lot of detail to them, while full-page artwork in magazines filled in the design details (especially the arcade game Ladybug, pictured above).</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="dataminers.html">
+                <div class="card-image">
+                    <img src="https://cdn.bulbagarden.net/upload/3/3f/Underground_mining_DPPt.png">
+                    <span class="card-title">Data Miners</span>
+                </div>
+                <div class="card-content">
+                    <p>This was a sketch for a potential video game idea based off the mining mechanic in Pokemon Diamond/Pearl/Platinum. The goal is to mine the rocks to retrieve treasures before the walls collapse. Planned to expand to make trickier treasures, possible user aids, and make cyber-themed - hence the title.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="townofsalem.html">
+                <div class="card-image">
+                    <img src="https://www.onrpg.com/wp-content/uploads/2014/12/Town-of-Salem-tr.jpg">
+                    <span class="card-title">Town of Salem Tracker</span>
+                </div>
+                <div class="card-content">
+                    <p>An outdated role-tracker for the online Mafia-esque community game, "Town of Salem".</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="rpg.html">
+                <div class="card-image">
+                    <img src="https://i.ytimg.com/vi/6XoPcc7UvEI/maxresdefault.jpg">
+                    <span class="card-title">RPG Stat Sheet Template</span>
+                </div>
+                <div class="card-content">
+                    <p>A template I found online and saved into here. I don't know where the source is, so keeping this here for posterity I guess.</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 
-<!-- JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/sandboxHeader.js"></script>
 </body>
 </html>
