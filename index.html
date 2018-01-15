@@ -22,12 +22,17 @@
         flex-wrap: wrap;
     }
     .flexTable3>div {
-        width: 30%;
+        width: 100%;
         box-sizing: border-box;
         flex-grow: 1;
         overflow: hidden;
         list-style: none;
         margin: 1em;
+    }
+    @media only screen and (min-width: 768px) {
+        .flexTable3>div {
+            width: 30%;
+        }
     }
     .card a {
         color: rgba(0,0,0,0.87);
@@ -45,11 +50,12 @@
     }
     .topImage {
         display: block;
-        width: 80%;
         height: 25em;
         margin: 0 auto;
-        object-fit: cover;
-        object-position: 50% 80%;
+    }
+    .updateDate {
+        opacity: 0.5;
+        padding-bottom: 10px;
     }
     </style>
 </head>
@@ -57,17 +63,54 @@
 <div id="headerSection"></div>
 
 <div class="container-fluid">
-    <img class="topImage" src="https://img00.deviantart.net/0d31/i/2017/180/b/7/_soosharpg_prompt__summer_with_kumo_and_lottie_by_pepper_wood-dbehp7g.png">
+    <img class="topImage" src="file:///Users/kathryndipippo/Desktop/newKathrynWeb/img/jPepperBlank.png">
     <h4>Kathryn's Web Development Sandbox</h4>
     <p>This repository is used for the small web-based side projects I play around with until they get big enough to warrant their own repository</p>
     <div class="flexTable3">
         <div class="card">
+            <a href="splash_April2017.html">
+                <div class="card-image">
+                    <img src="img/splash_april2017.png">
+                    <span class="card-title">Slider Splash Image</span>
+                </div>
+                <div class="card-content">
+                    <p class="updateDate">Last Updated: 1/14/2018</p>
+                    <p>April 2017, this was the front page of my personal website prior to changing it in January 2018. The purpose was to convey my dual-natured tastes in programming with full-stack development: a creative front-end personality and the thorough, calculating back-end personality. All illustrations are by myself.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="splash_Jan2017.html">
+                <div class="card-image">
+                    <img src="img/splash_jan2017.png">
+                    <span class="card-title">Parallax Splash Image</span>
+                </div>
+                <div class="card-content">
+                    <p class="updateDate">Last Updated: 1/14/2018</p>
+                    <p>January 2017, this was the front page of my personal website prior to changing it in April 2017. I wanted to create a cool interactive splash screen and decided to try my hand at Parallax images to create a sense of depth. Also combined it with a nifty rain-CSS effect. All illustrations are by myself.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="animalcrossing.html">
+                <div class="card-image">
+                    <img src="img/bob.jpg">
+                    <span class="card-title">Animal Crossing Villager Generator</span>
+                </div>
+                <div class="card-content">
+                    <p class="updateDate">Last Updated: 1/3/2018</p>
+                    <p>Wanted to make a simple villager generator based on the game Animal Crossing to help with character design ideas.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
             <a href="sooshTraitVisualizer.html">
                 <div class="card-image">
-                    <img src="http://www.sushidogs.com/uploads/1/0/4/9/10492009/8932842.png?190">
+                    <img src="img/retroSoosh.png">
                     <span class="card-title">Soosh Trait Visualizer</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 12/27/2017</p>
                     <p>Because I have trouble coming up with how to combine sushi dog traits, I made a "dress-up"-game type thing that gives me a "base" to start off with. I plan to eventually move into a separate Sushidog repository than here.</p>
                 </div>
             </a>
@@ -75,10 +118,11 @@
         <div class="card">
             <a href="personality.html">
                 <div class="card-image">
-                    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/11/11/harold-0.jpg">
+                    <img src="img/harold.jpg">
                     <span class="card-title">Personality Generator</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 12/27/2017</p>
                     <p>Random personality traits generator to help me come up with personalities for characters. I was not able to get an API call to a dictionary to fetch word definitions, so instead I made a .js file with a 2D array of words and definitions.</p>
                 </div>
             </a>
@@ -86,10 +130,11 @@
         <div class="card">
             <a href="spritegen.html">
                 <div class="card-image">
-                    <img src="http://flyers.arcade-museum.com/flyers_video/universal/48144201.jpg">
+                    <img src="img/ladybug.jpg">
                     <span class="card-title">NES-Style Sprite Generator</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 12/27/2017</p>
                     <p>I modified a pre-existing sprite generator as an exercise in character design for me. I click the generate button, and I draw what I think the sprite empbodies. Inspired by old NES graphics that didn't have a lot of detail to them, while full-page artwork in magazines filled in the design details (especially the arcade game Ladybug, pictured above). I plan on adding some examples of artwork that I've made.</p>
                 </div>
             </a>
@@ -97,10 +142,11 @@
         <div class="card">
             <a href="dataminers.html">
                 <div class="card-image">
-                    <img src="https://cdn.bulbagarden.net/upload/3/3f/Underground_mining_DPPt.png">
+                    <img src="img/pokemonMining.png">
                     <span class="card-title">Data Miners</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 12/27/2017</p>
                     <p>This was a sketch for a potential video game idea based off the mining mechanic in Pokemon Diamond/Pearl/Platinum. The goal is to mine the rocks to retrieve treasures before the walls collapse. Planned to expand to make trickier treasures, possible user aids, and make cyber-themed - hence the title.</p>
                 </div>
             </a>
@@ -108,10 +154,11 @@
         <div class="card">
             <a href="townofsalem.html">
                 <div class="card-image">
-                    <img src="https://www.onrpg.com/wp-content/uploads/2014/12/Town-of-Salem-tr.jpg">
+                    <img src="img/townOfSalem.jpg">
                     <span class="card-title">Town of Salem Tracker</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 4/19/2017</p>
                     <p>An outdated role-tracker for the online Mafia-esque community game, "Town of Salem".</p>
                 </div>
             </a>
@@ -119,14 +166,17 @@
         <div class="card">
             <a href="rpg.html">
                 <div class="card-image">
-                    <img src="https://i.ytimg.com/vi/6XoPcc7UvEI/maxresdefault.jpg">
+                    <img src="img/jontronRPG.jpg">
                     <span class="card-title">RPG Stat Sheet Template</span>
                 </div>
                 <div class="card-content">
+                    <p class="updateDate">Last Updated: 6/10/2017</p>
                     <p>A template I found online and saved into here. I don't know where the source is, so keeping this here for posterity I guess.</p>
                 </div>
             </a>
         </div>
+        <div></div>
+        <div></div>
     </div>
 </div>
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<title>Kathryn DiPippo | Homepage</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+	<script>document.documentElement.className = 'js';</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<!-- Force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- Make IE recognise HTML5 elements for styling -->
+	<!--[if lte IE 8]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<noscript>
+	<strong>Warning!</strong>
+	Your browser does not support HTML5 so some elements on this page are simulated using JScript. Unfortunately your browser has JScript disabled. Please enable it in order to display this page.
+	</noscript>
+	<![endif]-->
+	<!-- Disable image toolbar in IE6 -->
+	<!--[if lte IE 6]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.parallax.css" />
+
+	<!-- For text rotation -->
+	<link rel="stylesheet" type="text/css" href="css/simpletextrotator.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="css/weather.css">
+	<link rel="stylesheet" href="css/splashstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/sandboxHeader.css">
+</head>
+
+<body>
+	<div id="headerSection"></div>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><div class="logo"><div class="name">Kathryn DiPippo</div>Portfolio</div></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse"></div>
+		</div>
+	</nav>
+	
+	<div class="main">
+		<h1>Hello! I'm Kathryn DiPippo: <span class="rotate">Programmer, Artist, Web Developer, Graphic Designer, UX/UI Designer</span></h1>
+	</div>
+	<div id="target" class="weather rain parallax-port">
+		<img class="parallax-layer" src="img/parallax/1.png">
+		<img class="parallax-layer" src="img/parallax/2.png">
+		<img class="parallax-layer" src="img/parallax/3.png">
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script src="js/jquery.parallax.js"></script>
+	<script type="text/javascript">
+	$(".rotate").textrotator({
+		animation: "flipUp",
+		speed: 2000
+	});
+	</script>
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		var target = jQuery("#target");
+		target.children('img').parallax(
+			{ mouseport: target },
+			{ xparallax: 0.2, yparallax: 0.2 },     // Blue layer options
+			{ xparallax: 0.6, yparallax: 0.6 },     // Green layer options
+			{}                                      // Red layer options
+		);
+	});
+	</script>
+	<!--[if lt IE 7]>
+	<script type="text/javascript" src="js/jquery.ifixpng.js"></script>
+	<script type="text/javascript">jQuery(document).ready(function(){ jQuery("img[src$='png']").ifixpng(); });</script>
+	<![endif]-->
+	<script src="js/sandboxHeader.js"></script>
+</body>
+</html>

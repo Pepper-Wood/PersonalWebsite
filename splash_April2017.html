@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <title>April 2017 Interactive Splash</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/sandboxHeader.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="headerSection"></div>
+
+    <div class="topNav_container"><div class="container">
+        <div class="col-md-5 col-sm-5 col-xs-8">
+            <a href="index.html"><img src="img/logo.png" style="height:60px"></a>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-4" style="padding-top:13px"></div>
+    </div></div>
+
+    <div style="font-size:30px;text-align:center;">Hello! I'm <span style="font-weight:bold;">Kathryn DiPippo</span>, a <span style="font-weight:bold;color:#ff1447">front-end</span> / <span style="font-weight:bold;color:#16f9d0">back-end</span> developer and graphic artist.</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ba-slider">
+                    <img src="img/backend.png" alt="">
+                    <div class="resize">
+                        <img src="img/frontend.png" alt="">
+                    </div>
+                    <span class="handle"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.ba-slider').each(function() {
+            var cur = $(this);
+            var width = cur.width()+'px';
+            cur.find('.resize img').css('width', width);
+            drags(cur.find('.handle'), cur.find('.resize'), cur);
+        });
+    });
+
+    $(window).resize(function() {
+        $('.ba-slider').each(function() {
+            var cur = $(this);
+            var width = cur.width()+'px';
+            cur.find('.resize img').css('width', width);
+        });
+    });
+
+    function drags(dragElement, resizeElement, container) {
+        dragElement.on('mousedown touchstart', function(e) {
+            dragElement.addClass('draggable');
+            resizeElement.addClass('resizable');
+            var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+            var dragWidth = dragElement.outerWidth(),
+            posX = dragElement.offset().left + dragWidth - startX,
+            containerOffset = container.offset().left,
+            containerWidth = container.outerWidth();
+
+            minLeft = containerOffset + 10;
+            maxLeft = containerOffset + containerWidth - dragWidth - 10;
+            dragElement.parents().on("mousemove touchmove", function(e) {
+                var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+                leftValue = moveX + posX - dragWidth;
+
+                if ( leftValue < minLeft) {
+                    leftValue = minLeft;
+                } else if (leftValue > maxLeft) {
+                    leftValue = maxLeft;
+                }
+                widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+
+                $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+                    $(this).removeClass('draggable');
+                    resizeElement.removeClass('resizable');
+                });
+                $('.resizable').css('width', widthValue);
+            }).on('mouseup touchend touchcancel', function() {
+                dragElement.removeClass('draggable');
+                resizeElement.removeClass('resizable');
+            });
+            e.preventDefault();
+        }).on('mouseup touchend touchcancel', function(e){
+            dragElement.removeClass('draggable');
+            resizeElement.removeClass('resizable');
+        });
+    }
+    </script>
+    <script src="js/sandboxHeader.js"></script>
+</body>
+</html>

@@ -1,9 +1,13 @@
-console.log(window.location.href);
 $("#headerSection").html(
     '<div class="sidebar">'
     + '    <span class="sidebarTitle">Sandbox Repositories</span>'
     + '    <ul class="sidebarNav">'
+    + '        <li><a href="http://www.kathryndipippo.com">Back to kathryndipippo.com</a></li>'
+    + '        <hr>'
     + '        <li id="sidenavIndex"><a href="index.html">Home</a></li>'
+    + '        <hr>'
+    + '        <li id="sidenavApril2017"><a href="splash_April2017.html">April 2017 Slider Splash</a></li>'
+    + '        <li id="sidenavJan2017"><a href="splash_Jan2017.html">Jan 2017 Parallax Splash</a></li>'
     + '        <li id="sidenavSoosh"><a href="sooshTraitVisualizer.html">Soosh Trait Visualizer</a></li>'
     + '        <li id="sidenavPersonality"><a href="personality.html">Personality Generator</a></li>'
     + '        <li id="sidenavSprite"><a href="spritegen.html">NES-Style Sprite Generator</a></li>'
@@ -24,10 +28,10 @@ $("#headerSection").html(
 );
 
 function addActiveTab() {
-    var sidenavTabs = ["Index","Soosh","Personality","Sprite","Data","Salem"];
+    var sidenavTabs = ["Index","April2017","Jan2017","Soosh","Personality","Sprite","Data","Salem"];
     var currentPage = window.location.href;
     for (i=0; i<sidenavTabs.length; i++) {
-        if (currentPage.includes(sidenavTabs[i].toLowerCase())) {
+        if (currentPage.toLowerCase().includes(sidenavTabs[i].toLowerCase())) {
             $("#sidenav" + sidenavTabs[i]).addClass("active");
             return;
         }
