@@ -13,17 +13,48 @@
     body {
         background-image: url(img/acGrass.png);
     }
+    .textCenter {
+        text-align: center;
+    }
+    .card {
+        margin: 0.25em 0;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+        background-color: #FFF;
+        border-radius: .3rem;
+        padding: 1em;
+    }
+    .cardTan {
+        margin-top: 2em;
+        background-color: #f9ecc3;
+    }
     </style>
 </head>
 <body>
     <div id="headerSection"></div>
 
-    <div class="container-fluid">
-        <h1>Animal Crossing Villager Generator</h1>
+    <div class="container">
+        <div class="card cardTan">
+            <h3 class="textCenter">Animal Crossing Villager Creator</h3>
+            <div class="card">
+                Here we go
+            </div>
+            <div class="btn btn-primary btn-block">Reroll</div>
+        </div>
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/sandboxHeader.js"></script>
+    <script>
+    var species = ["Alligator","Anteater","Bear","Bird","Bull","Cat","Chicken","Cow","Cub","Deer","Dog","Duck","Eagle","Elephant","Frog","Goat","Gorilla","Hamster","Hippo","Horse","Kangaroo","Koala","Lion","Moneky","Mouse","Octopus","Ostrich","Penguin","Pig","Rabbit","Rhino","Sheep","Squirrel","Tiger","Wolf"];
+    var specialSpecies = ["Alpaca","Axolotl","Beaver","Boar","Camel","Chameleon","Fox","Frill-necked Lizard","Giraffe","Hedgehog","Human","Kappa","Mole","Otter","Owl","Panther","Peacock","Pelican","Pigeon","Raccoon","Reindeer","Seagull","Sea Lion","Skunk","Sloth","Specter","Tapir","Tortoise","Turkey","Walrus"];
+    var personalities = ["Cranky","Jock","Lazy","Normal","Peppy","Smug","Snooty","Big Brother/Big Sister"];
+    var paintbrushnames = ["Red","Yellow","Green","Blue","Purple","White","Rainbow","Silver","Glowing","Striped","Shadow","Split","Invisible","Cloud","Disco","Electric","Fire, Fire, Your Pants On Fire","Speckled","Scritchy","Skunk","Strawberry Fields Forever","Starry","Spotted","Checkered","Halloween","Christmas","Faerie","Golden","Lost Desert","Brown","Tyrannian","Baby Paint","Pirate","Mystery Island","Orange","Pink","Ghost","Plushie","Darigan","Maraquan","Usuki","Snow","Royal","Grey","Camoflage","Biscuit","Zombie"];
+    var paintbrushimages = ["http://images.neopets.com/items/redpntbrsh.gif","http://images.neopets.com/items/yellowpntbrsh.gif","http://images.neopets.com/items/greenpntbrsh.gif","http://images.neopets.com/items/bluepntbrsh.gif","http://images.neopets.com/items/purplepntbrsh.gif","http://images.neopets.com/items/whitepntbrsh.gif","http://images.neopets.com/items/rainbowpntbrsh.gif","http://images.neopets.com/items/silverpntbrsh.gif","http://images.neopets.com/items/glowingpntbrsh.gif","http://images.neopets.com/items/stripedpntbrsh.gif","http://images.neopets.com/items/shadowpntbrsh.gif","http://images.neopets.com/items/halfandhalfpntbrsh.gif","http://images.neopets.com/items/invisiblepntbrsh.gif","http://images.neopets.com/items/cloudpntbrush.gif","http://images.neopets.com/items/discopntbrush.gif","http://images.neopets.com/items/electricbluepntbrush.gif","http://images.neopets.com/items/firepntbrush.gif","http://images.neopets.com/items/greenwhitedotspntbrush.gif","http://images.neopets.com/items/sketchpntbrush.gif","http://images.neopets.com/items/skunkpntbrush.gif","http://images.neopets.com/items/strawberrypntbrush.gif","http://images.neopets.com/items/starspntbrush.gif","http://images.neopets.com/items/spottedpntbrush.gif","http://images.neopets.com/items/checkeredpntbrush.gif","http://images.neopets.com/items/halloweenpntbrsh.gif","http://images.neopets.com/items/xmaspaintbrush.gif","http://images.neopets.com/items/faeriepntbrush.gif","http://images.neopets.com/items/gold_pntbrush.gif","http://images.neopets.com/items/desertpaintbrush.gif","http://images.neopets.com/items/brownpntbrush.gif","http://images.neopets.com/items/tyrannianpntbrush.gif","http://images.neopets.com/items/babypaintbrush.gif","http://images.neopets.com/items/piratepntbrush.gif","http://images.neopets.com/items/islandpntbrush.gif","http://images.neopets.com/items/orange_paint_brush.gif","http://images.neopets.com/items/pink_paint_brush.gif","http://images.neopets.com/items/ghostpntbrush.gif","http://images.neopets.com/items/plushiepaintbrush.gif","http://images.neopets.com/items/pb_darigan.gif","http://images.neopets.com/items/maraquanpntbrush.gif","http://images.neopets.com/items/usukipaintbrush.gif","http://images.neopets.com/items/paintbrush_snowman.gif","http://images.neopets.com/items/paintbrush_royal.gif","http://images.neopets.com/items/greypntbrush.gif","http://images.neopets.com/items/paintbrush_camo.gif","http://images.neopets.com/items/paintbrush_biscuit.gif","http://images.neopets.com/items/paintbrush_zombie.gif"];
+    function generateVillager() {
+
+    }
+    </script>
 </body>
 </html>
